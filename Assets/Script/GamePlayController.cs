@@ -25,4 +25,14 @@ public class GamePlayController : MonoBehaviour
     private GameChoice player_choice = GameChoice.NONE, opponent_choice = GameChoice.NONE;
 
     private AnimationController animationController;
+
+    void Awake()
+    {
+        animationController = GetComponent<AnimationController>();
+    }
+
+    public void SetChoice(GameChoice gameChoice)
+    {
+
+    }
 }
