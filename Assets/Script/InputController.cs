@@ -19,8 +19,6 @@ public class InputController : MonoBehaviour
     {
         string choiceName = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
 
-        Debug.Log("Player Selected : " + choiceName);
-
         GameChoice selectedChoice = GameChoice.NONE;
 
         switch (choiceName)
@@ -38,6 +36,7 @@ public class InputController : MonoBehaviour
                 break;
         }
 
+        playController.SetChoice(selectedChoice);
         animationController.PlayerMadeChoice();
     }
 }
